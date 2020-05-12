@@ -3,10 +3,9 @@ import './App.css';
 import * as api from './services/api';
 
 function App() {
-  api.getCategories().then(categories => { console.log(categories) }) 
+  api.getCategories().then(categories => { console.log(categories) });
   return (
-    <div className="App">
-    </div>
+    <div className="App" />
   );
 }
 
