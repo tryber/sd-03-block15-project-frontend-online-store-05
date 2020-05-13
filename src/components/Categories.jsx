@@ -23,7 +23,7 @@ class Categories extends Component {
         <li data-testid="category" key={object.name}>{object.name}</li>
       ));
     }
-    return (<li>Carregando Categorias</li>);
+    return (<li>As categorias estão sendo carregadas</li>);
   }
 
   render() {
