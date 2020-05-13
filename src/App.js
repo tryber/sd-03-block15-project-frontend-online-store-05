@@ -1,14 +1,15 @@
 import React from 'react';
-import './App.css';
 import * as api from './services/api';
-import ProductList from './components/ProductList';
+import Home from './pages/Home';
+import Shop from'./pages/Shop';
 
 function App() {
   api.getCategories()
     .then((categories) => { console.log(categories); });
   return (
-    <div className="App" >
-      <ProductList />
+    <div>
+      <Home path="/" />
+      <Shop path="/shop" />
     </div>
   );
 }
