@@ -19,7 +19,9 @@ class Categories extends Component {
   renderCategoriesList() {
     const { categories } = this.state;
     if (typeof categories === 'object') {
-      return categories.map((object) => <li key={object.name}>{object.name}</li>);
+      return categories.map((object) => (
+        <li data-testid="category" key={object.name}>{object.name}</li>
+      ));
     }
     return (<li>Carregando Categorias</li>);
   }
@@ -27,7 +29,7 @@ class Categories extends Component {
   render() {
     return (
       <div>
-        <h1 data-testid="category">Categorias:</h1>
+        <h1>Categorias:</h1>
         <ul>
           {this.renderCategoriesList()}
         </ul>
