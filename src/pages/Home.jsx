@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from '../components/SearchBar';
 import Categories from '../components/Categories';
 import ProductList from '../components/ListingProducts';
-import './Home.css'
+import './Home.css';
 
 class Home extends Component {
   render() {
@@ -20,7 +20,7 @@ class Home extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

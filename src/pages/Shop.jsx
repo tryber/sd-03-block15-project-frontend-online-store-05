@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import './Home.css'
+import React, { Component } from 'react';
+import './Home.css';
 
-export class Shop extends Component {
+class Shop extends Component {
   render() {
     return (
       <div className="Shop">

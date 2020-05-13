@@ -4,7 +4,7 @@ class Categories extends Component {
   render() {
     return (
       <div>
-        <h1 data-testid="category" >Categorias:</h1>
+        <h1 data-testid="category">Categorias:</h1>
       </div>
     );
   }

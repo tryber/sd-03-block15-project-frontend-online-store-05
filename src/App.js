@@ -1,7 +1,7 @@
 import React from 'react';
 import * as api from './services/api';
 import Home from './pages/Home';
-import Shop from'./pages/Shop';
+import Shop from './pages/Shop';
 
 function App() {
   api.getCategories()

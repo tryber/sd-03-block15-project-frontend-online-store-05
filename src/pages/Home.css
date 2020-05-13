@@ -10,20 +10,20 @@
 
 .SearchBar {
   border: 5px solid red;
-  text-align: center;
   height: 25%;
+  text-align: center;
 }
 
 .ProductList {
   border: 5px solid blue;
-  text-align: center;
   height: 75%;
+  text-align: center;
 }
 
 .Categories {
   border: 5px solid green;
-  width: 25%;
   height: 100vh;
+  width: 25%;
 }
 
 .Shop {
@@ -31,7 +31,7 @@
 }
 
 .SarchBar {
-  text-align: center;
   display: flex;
   justify-content: space-around;
+  text-align: center;
 }
