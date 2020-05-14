@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import ProductCard from './products/ProductCard';
-import SearchBar from './SearchBar';
 
 class ProductList extends Component {
   render() {
+    const { products } = this.props;
     return (
       <div>
-        <h1>LISTA DE PRODUTOS</h1>
-        <SearchBar />
-        <p>Você ainda não realizou uma busca ou Chama Product Card</p>
-        <ProductCard />
+        {products.map((product, i) => <ProductCard key={i} product={product} />)}
       </div>
     );
   }
