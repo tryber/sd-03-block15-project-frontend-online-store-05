@@ -20,7 +20,10 @@ class Categories extends Component {
     const { categories } = this.state;
     if (typeof categories === 'object') {
       return categories.map((object) => (
-        <li data-testid="category" key={object.name}>{object.name}</li>
+        <div>
+          <input type="radio" data-testid="category" id={object.name} key={object.name} />
+          <label htmlFor={object.name}>{object.name}</label>
+        </div>
       ));
     }
     return (<li>As categorias estão sendo carregadas</li>);
@@ -30,9 +33,7 @@ class Categories extends Component {
     return (
       <div>
         <h1>Categorias:</h1>
-        <ul>
-          {this.renderCategoriesList()}
-        </ul>
+        {this.renderCategoriesList()}
       </div>
     );
   }
