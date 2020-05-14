@@ -22,12 +22,12 @@
 
 .Categories {
   border: 5px solid green;
-  height: 100vh;
+
   width: 25%;
 }
 
 .Shop {
-  display: none;
+  text-align: center;
 }
 
 .SarchBar {

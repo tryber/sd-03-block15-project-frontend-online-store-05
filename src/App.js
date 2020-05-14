@@ -1,16 +1,16 @@
 import React from 'react';
-import * as api from './services/api';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 
 function App() {
-  api.getCategories()
-    .then((categories) => { console.log(categories); });
   return (
-    <div>
-      <Home path="/" />
-      <Shop path="/shop" />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/Shop" component={Shop} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
