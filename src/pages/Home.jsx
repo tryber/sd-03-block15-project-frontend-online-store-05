@@ -37,7 +37,13 @@ class Home extends Component {
           <div className="ProductList">
             {products !== null
               ? <ProductList products={products} />
-              : <p data-testid="home-initial-message">Digite algum termo de pesquisa ou escolha uma categoria.</p>}
+              : (
+                <p
+                  data-testid="home-initial-message"
+                >
+                  Digite algum termo de pesquisa ou escolha uma categoria.
+                </p>
+              )}
           </div>
         </div>
       </div>
