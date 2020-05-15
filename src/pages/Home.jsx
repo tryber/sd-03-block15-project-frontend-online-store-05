@@ -5,6 +5,7 @@ import Categories from '../components/Categories';
 import ProductList from '../components/ListingProducts';
 import './Home.css';
 
+
 class Home extends Component {
   constructor(props) {
     super(props);
