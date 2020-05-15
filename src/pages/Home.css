@@ -8,27 +8,22 @@
   flex-direction: column;
 }
 
-
-
 .ProductList {
   border: 2px;
   flex-wrap: wrap;
   height: 750px;
   text-align: center;
   width: 1000px;
-  
 }
 
 .Card {
-
   border: 1px solid black;
   display: inline-block;
   font-size: 12px;
-  margin:10px;
+  margin: 10px;
   padding-top: 20px;
   text-align: center;
   width: 200px;
-
 }
 
 .Categories {
