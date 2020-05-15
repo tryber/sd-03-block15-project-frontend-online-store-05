@@ -31,10 +31,6 @@
   width: 250px;
 }
 
-.Shop {
-  display: none;
-}
-
 .SarchBar {
   display: flex;
   justify-content: center;
