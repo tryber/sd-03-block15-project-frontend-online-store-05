@@ -24,7 +24,7 @@ class Categories extends Component {
             type="radio"
             data-testid="category"
             id={object.name}
-            onChange={() => onChange(object.id)}
+            onClick={() => onChange(object.id)}
             name="category"
           />
           <label htmlFor={object.name}>{object.name}</label>

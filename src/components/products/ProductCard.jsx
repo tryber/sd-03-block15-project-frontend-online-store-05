@@ -17,6 +17,7 @@ class ProductCard extends Component {
         >
           Detalhes
         </Link>
+        <button type="submit" className="Addtocart"> Adicionar Ao carrinho</button>
       </div>
     );
   }

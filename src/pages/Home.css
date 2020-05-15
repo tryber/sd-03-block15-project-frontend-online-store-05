@@ -9,7 +9,7 @@
 }
 
 .ProductList {
-  border: 2px;
+  border: 1px;
   flex-wrap: wrap;
   height: 750px;
   text-align: center;
@@ -20,7 +20,7 @@
   border: 1px solid black;
   display: inline-block;
   font-size: 12px;
-  margin: 10px;
+  margin: 5px;
   padding-top: 20px;
   text-align: center;
   width: 200px;
@@ -41,4 +41,27 @@
   border-radius: 10px;
   margin: 0 10px;
   width: 80%;
+}
+
+.Addtocart {
+  align-items: center;
+  background-color: brown;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  font-weight: 600;
+  margin-left: 13%;
+  text-align: center;
+}
+
+.ShopCart {
+  border: 1px solid black;
+  flex-wrap: wrap;
+  height: 750px;
+  text-align: center;
+}
+
+.MessageEmpt{
+  margin-top: 5%;
+  font-weight: 600;
 }
