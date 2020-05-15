@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -15,8 +16,8 @@ class SearchBar extends Component {
     const { queryText } = this.state;
     return (
       <div className="SarchBar">
-        <h3> Lupa Icon </h3>
         <input
+          className="InputClass"
           data-testid="query-input"
           type="text"
           onChange={(e) => this.textInputChangeHandler(e.target.value)}
@@ -28,6 +29,12 @@ class SearchBar extends Component {
         >
           Pesquisar
         </button>
+        <Link
+          data-testid="shopping-cart-button"
+          to="/Shop"
+        >
+          ShoppingCart
+        </Link>
       </div>
     );
   }

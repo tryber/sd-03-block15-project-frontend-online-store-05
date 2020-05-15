@@ -1,5 +1,6 @@
 .Home {
   display: flex;
+  margin: 1%;
 }
 
 .Aside {
@@ -7,38 +8,37 @@
   flex-direction: column;
 }
 
-.SearchBar {
-  border: 5px solid red;
-  text-align: center;
-}
-
 .ProductList {
-  border: 5px solid blue;
-  display: flex;
+  border: 2px;
   flex-wrap: wrap;
-  justify-content: space-around;
+  height: 750px;
   text-align: center;
+  width: 1000px;
 }
 
 .Card {
-  border: 5px solid black;
-  font-size: 14px;
-  margin: 15px;
-  position: relative;
+  border: 1px solid black;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px;
+  padding-top: 20px;
   text-align: center;
   width: 200px;
 }
 
 .Categories {
-  border: 5px solid green;
-}
-
-.Shop {
-  display: none;
+  border: 1px solid black;
+  width: 250px;
 }
 
 .SarchBar {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
+}
+
+.InputClass {
+  border-radius: 10px;
+  margin: 0 10px;
+  width: 80%;
 }
