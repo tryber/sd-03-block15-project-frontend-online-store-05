@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -28,6 +29,12 @@ class SearchBar extends Component {
         >
           Pesquisar
         </button>
+        <Link
+          to="/Shop"
+          data-testid="shopping-cart-button"
+        >
+          Carrinho Button
+        </Link>
       </div>
     );
   }
