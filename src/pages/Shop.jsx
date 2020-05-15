@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 class Shop extends Component {
   render() {
@@ -11,6 +12,9 @@ class Shop extends Component {
           data-testid="shopping-cart-button"
         />
         <p data-testid="shopping-cart-empty-message">Seu carrinho está vazio</p>
+        <Link to="/">
+          Voltar
+        </Link>
       </div>
     );
   }
