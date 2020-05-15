@@ -5,7 +5,7 @@ class ProductList extends Component {
   render() {
     const { products } = this.props;
     return (
-      <div>
+      <div className="ProductList">
         {products.map((product) => <ProductCard product={product} />)}
       </div>
     );
