@@ -10,18 +10,23 @@ class Categories extends Component {
   }
 
   componentDidMount() {
-    const { categories } = this.state;
     api.getCategories()
-      .then((results) => this.setState({ categories: results }))
-      .then(() => console.log(categories));
+      .then((results) => this.setState({ categories: results }));
   }
 
   renderCategoriesList() {
+    const { onChange } = this.props;
     const { categories } = this.state;
     if (typeof categories === 'object') {
       return categories.map((object) => (
-        <div>
-          <input type="radio" data-testid="category" id={object.id} key={object.name} />
+        <div key={object.name}>
+          <input
+            type="radio"
+            data-testid="category"
+            id={object.name}
+            onChange={() => onChange(object.id)}
+            name="category"
+          />
           <label htmlFor={object.name}>{object.name}</label>
         </div>
       ));
@@ -33,9 +38,7 @@ class Categories extends Component {
     return (
       <div>
         <h1>Categorias:</h1>
-
         {this.renderCategoriesList()}
-
       </div>
     );
   }
