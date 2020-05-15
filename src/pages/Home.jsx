@@ -10,12 +10,14 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = { selectedCategory: null, products: null };
-    this.saveSelectedCategory = this.saveSelectedCategory.bind(this);
+    this.selectCategoryAndSearch = this.selectCategoryAndSearch.bind(this);
     this.searchProducts = this.searchProducts.bind(this);
   }
 
-  saveSelectedCategory(id) {
+  selectCategoryAndSearch(id) {
     this.setState({ selectedCategory: id });
+    api.getProductsFromCategoryAndQuery(id, '')
+      .then((products) => this.setState({ products: products.results }));
   }
 
   searchProducts(query) {
@@ -29,7 +31,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <div className="Categories">
-          <Categories onChange={this.saveSelectedCategory} />
+          <Categories onChange={this.selectCategoryAndSearch} />
         </div>
         <div className="Aside">
           <div className="SearchBar">
