@@ -1,6 +1,59 @@
 import React from 'react';
 
 class ListCheckout extends React.Component {
+  static renderForm() {
+    return (
+      <div>
+        <form>
+          <label htmlFor="fullname">
+            Nome Completo:
+            <input data-testid="checkout-fullname" />
+          </label>
+          <label htmlFor="email">
+            Email:
+            <input data-testid="checkout-email" />
+          </label>
+          <label htmlFor="cpf">
+            CPF:
+            <input data-testid="checkout-cpf" />
+          </label>
+          <label htmlFor="phone">
+            Telefone:
+            <input data-testid="checkout-phone" />
+          </label>
+          <label htmlFor="cep">
+            CEP:
+            <input data-testid="checkout-cep" />
+          </label>
+          <label htmlFor="address">
+            Endereço:
+            <input data-testid="checkout-address" />
+          </label>
+        </form>
+      </div>
+    );
+  }
+
+  static renderCheckOut() {
+    const storage = JSON.parse(localStorage.getItem('listItem'));
+    const { total } = this.state;
+    return (
+      <div>
+        {storage.map((e) => (
+          <div key={e.title}>
+            <div>
+              <span>{e.title}</span>
+              <span>{e.total}</span>
+              <span>{e.price}</span>
+            </div>
+          </div>
+        ))}
+        <span>Total</span>
+        <span>{total}</span>
+      </div>
+    );
+  }
+
   constructor(props) {
     super(props);
     this.state = { total: 0 };
@@ -24,60 +77,13 @@ class ListCheckout extends React.Component {
     this.setState(() => ({ total: FinalValue }));
   }
 
-  static renderCheckOut() {
-    const storage = JSON.parse(localStorage.getItem('listItem'));
-    const { total } = this.state;
-    return (
-      <div>
-        {storage.map((e) => (
-          <div key={e.title}>
-            <div>
-              <span>{e.title}</span>
-              <span>{e.total}</span>
-              <span>{e.price}</span>
-            </div>
-            <div>
-              <form>
-                <label htmlFor="fullname">
-                  Nome Completo:
-                  <input data-testid="checkout-fullname" />
-                </label>
-                <label htmlFor="email">
-                  Email:
-                  <input data-testid="checkout-email" />
-                </label>
-                <label htmlFor="cpf">
-                  CPF:
-                  <input data-testid="checkout-cpf" />
-                </label>
-                <label htmlFor="phone">
-                  Telefone:
-                  <input data-testid="checkout-phone" />
-                </label>
-                <label htmlFor="cep">
-                  CEP:
-                  <input data-testid="checkout-cep" />
-                </label>
-                <label htmlFor="address">
-                  Endereço:
-                  <input data-testid="checkout-address" />
-                </label>
-              </form>
-            </div>
-          </div>
-        ))}
-        <span>Total</span>
-        <span>{total}</span>
-      </div>
-    );
-  }
-
   render() {
     const storage = JSON.parse(localStorage.getItem('listItem'));
     if (storage && (storage.length !== 0)) {
       return (
         <div>
-          {this.renderCheckOut}
+          {this.renderCheckOut()}
+          {this.renderForm()}
         </div>
       );
     }

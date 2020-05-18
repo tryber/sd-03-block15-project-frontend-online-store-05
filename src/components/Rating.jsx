@@ -1,5 +1,5 @@
 import React from 'react';
-import Star from './Star';
+import Star from './products/Star';
 
 
 const renderComment = (value, onChange) => (
