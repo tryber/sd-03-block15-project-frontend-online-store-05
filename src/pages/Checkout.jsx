@@ -9,7 +9,7 @@ class Checkout extends React.Component {
       <div>
         <ListCheckout />
         <PaymentForm />
-        <button>Finalizar Compra </button>
+        <button type="button">Finalizar Compra </button>
         <Link to="/">Voltar</Link>
       </div>
     );
