@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../Home.css';
+import Rating from '../components/products/Rating';
 
 export class ProductDetail extends Component {
   render() {
@@ -18,6 +20,7 @@ export class ProductDetail extends Component {
             <Link to="/">Voltar</Link>
           </div>
         </div>
+        <Rating />
       </div>
     );
   }
