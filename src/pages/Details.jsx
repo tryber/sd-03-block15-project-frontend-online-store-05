@@ -16,7 +16,6 @@ export class ProductDetail extends Component {
             >
               {`${title} - R$${price}`}
             </h5>
-            <button type="button" data-testid="product-detail-add-to-cart">Adicionar ao carrinho</button>
             <h3>Especificações Técnicas</h3>
             <Link to="/">Voltar</Link>
             <button data-testid="shopping-cart-button" type="button">Carrinho</button>
