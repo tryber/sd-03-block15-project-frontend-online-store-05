@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import * as api from '../services/api';
+import Header from '../css/Header';
 import SearchBar from '../components/SearchBar';
 import Categories from '../components/Categories';
 import ProductList from '../components/ListingProducts';
-import './Home.css';
+import '../css/Home.css';
 
 
 class Home extends Component {
@@ -29,26 +30,31 @@ class Home extends Component {
   render() {
     const { products } = this.state;
     return (
-      <div className="Home">
-        <div className="Categories">
-          <Categories onChange={this.selectCategoryAndSearch} />
-        </div>
-        <div className="Aside">
-          <div className="SearchBar">
-            <SearchBar className="SearchBar" onChange={this.searchProducts} />
+      <div className="App">
+        <Header />
+        <div className="Home">
+          <div className="Categories">
+            <Categories onChange={this.selectCategoryAndSearch} />
           </div>
-          <div className="ProductList">
-            {products !== null
-              ? <ProductList products={products} />
-              : (
-                <p
-                  data-testid="home-initial-message"
-                >
-                  Digite algum termo de pesquisa ou escolha uma categoria.
-                </p>
-              )}
+          <div className="Aside">
+            <div className="SearchBar">
+              <SearchBar className="SearchBar" onChange={this.searchProducts} />
+            </div>
+            <div className="ProductList">
+              {products !== null
+                ? <ProductList products={products} />
+                : (
+                  <p
+                    className="textProduct"
+                    data-testid="home-initial-message"
+                  >
+                    Digite algum termo de pesquisa ou escolha uma categoria.
+                  </p>
+                )}
+            </div>
           </div>
         </div>
+        {/* <Footer /> */}
       </div>
     );
   }

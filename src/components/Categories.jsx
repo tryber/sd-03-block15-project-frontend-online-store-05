@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import * as api from '../services/api';
+import Checkbox from '@material-ui/core/Checkbox';
+
 
 class Categories extends Component {
+
   constructor(props) {
     super(props);
     this.state = { categories: '' };
@@ -11,7 +14,7 @@ class Categories extends Component {
 
   componentDidMount() {
     api.getCategories()
-      .then((results) => this.setState({ categories: results }));
+      .then((results) => this.setState({ categories: results }))
   }
 
   renderCategoriesList() {
@@ -20,7 +23,9 @@ class Categories extends Component {
     if (typeof categories === 'object') {
       return categories.map((object) => (
         <div key={object.name}>
-          <input
+          <Checkbox
+            inputProps={{ 'aria-label': 'decorative checkbo' }}
+            color="default"
             type="radio"
             data-testid="category"
             id={object.name}
@@ -37,7 +42,7 @@ class Categories extends Component {
   render() {
     return (
       <div>
-        <h1>Categorias:</h1>
+        <h1 className="textCategories">Categorias:</h1>
         {this.renderCategoriesList()}
       </div>
     );
