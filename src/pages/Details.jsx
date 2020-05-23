@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../Home.css';
+import Rating from '../components/products/Rating';
 
 export class ProductDetail extends Component {
   render() {
@@ -16,8 +18,10 @@ export class ProductDetail extends Component {
             </h5>
             <h3>Especificações Técnicas</h3>
             <Link to="/">Voltar</Link>
+            <button data-testid="shopping-cart-button" type="button">Carrinho</button>
           </div>
         </div>
+        <Rating />
       </div>
     );
   }

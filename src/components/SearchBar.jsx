@@ -33,7 +33,7 @@ class SearchBar extends Component {
           data-testid="shopping-cart-button"
           to="/Shop"
         >
-          ShoppingCart
+          Carrinho
         </Link>
       </div>
     );
